@@ -1,0 +1,107 @@
+/* ===================================== */
+/* =            MOBILE MENU            = */
+/* ===================================== */
+/* Hide hamburger menu on larger screens */
+/* Basic Hamburger icon styling */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    width: 30px;
+    height: 40px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 1001;
+    /* margin-right: 60px; */
+}
+
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--text-colour-1);
+    margin: 6px 0;
+    transition: 0.4s ease;
+}
+
+/* When the hamburger menu is opened, transform the bars into an "X" */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px); /* Adjusted translation */
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar to form an "X" */
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px); /* Adjusted translation */
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px;
+        /* Reduce padding on mobile to prevent overflow */
+        width: 100%;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* ===================================== */
+    /* =           HEADER: LEFT            = */
+    /* ===================================== */
+    .header-link:hover {
+        opacity: 1.0;
+        /* Optional: Add hover effect */
+    }
+
+    /* ===================================== */
+    /* =           NAVIGATION BAR          = */
+    /* ===================================== */
+    /* Navigation menu setup */
+    nav {
+        /* Position */
+        position: absolute;
+        display: none; /* Hidden initially */
+        top: 120px; /* Positioned just below the header */
+        left: 0;
+        z-index: 999;
+        /* Dimension */
+        width: 100%;
+        /* Colour */
+        background-color: var(--bg-colour-3);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    }
+
+    /* Show the nav menu with a fade-in effect */
+    .nav-visible {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Mobile nav links styled vertically */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        text-decoration: none;
+        color: var(--text-colour-1);
+    }
+}

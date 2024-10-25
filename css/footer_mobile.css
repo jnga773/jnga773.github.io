@@ -1,0 +1,50 @@
+/* ===================================== */
+/* =            MOBILE STYLING          = */
+/* ===================================== */
+@media (max-width: 768px) {
+    /* ===================================== */
+    /* =               FOOTER              = */
+    /* ===================================== */
+    footer {
+        flex-direction: row; /* Stack content vertically */
+        padding: 0;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        text-align: left;
+        align-items: start;
+        height: auto; /* Let the footer adjust height automatically */
+        /* width: 100%; */
+    }
+
+    /* ===================================== */
+    /* =            FOOTER: LEFT           = */
+    /* ===================================== */
+    .footer-left {
+        display: none; /* turn off copyright when mobile */
+    }
+
+    /* ===================================== */
+    /* =            FOOTER: RIGHT          = */
+    /* ===================================== */
+    .footer-right {
+        flex-direction: column; /* Stack email and social blocks */
+        gap: 20px;
+        /* Alignment */
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer-email-block, .footer-social-block {
+        align-items: flex-start;
+    }
+
+    .footer-social-icons {
+        justify-content: flex-start;
+        gap: 15px; /* Increase gap for better spacing on smaller screens */
+    }
+
+    .footer-social-icons a img {
+        width: 25px; /* Increase size for better visibility */
+        height: 25px;
+    }
+}

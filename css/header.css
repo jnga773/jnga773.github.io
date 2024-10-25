@@ -1,0 +1,135 @@
+/* ===================================== */
+/* =               HEADER              = */
+/* ===================================== */
+/* Header: fixed at the top of the page, white background */
+header {
+    /* Display */
+    box-sizing: border-box;
+    display: flex;
+    /* overflow: hidden; */
+    /* Alignment */
+    justify-content: space-between;
+    align-items: center;
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Dimension */
+    width: 100%;
+    height: 120px;
+    /* Padding */
+    padding: 20px 30px;
+    /* Colour */
+    background-color: var(--bg-colour-1);
+    color: var(--text-colour-1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* ===================================== */
+/* =           HEADER: LEFT            = */
+/* ===================================== */
+/* Header Left Section with Name and Title */
+.blue-box, .invisible-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.blue-box {
+    background-color: var(--highlight-colour-1);
+}
+
+.invisible-box {
+    background-color: transparent;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header-grid-blue-box header-grid-name"
+        "header-grid-invisible-box header-grid-title";
+    /* Alignment */
+    grid-auto-flow: row;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+    /* Padding */
+    padding: 0;
+    padding-right: 0;
+    margin: 0;
+    /* padding-left: ; */
+}
+
+.header-grid-blue-box {
+    grid-area: header-grid-blue-box;
+}
+
+.header-grid-invisible-box {
+    grid-area: header-grid-invisible-box;
+}
+
+.header-grid-name {
+    grid-area: header-grid-name;
+    /* display: flex; */
+}
+.header-grid-name h1 {
+    /* Font */
+    font-size: 25px;
+    margin: 0;
+    font-family: Poppins-Semi-Bold;
+}
+
+.header-grid-title {
+    grid-area: header-grid-title;
+    /* display: flex; */
+}
+.header-grid-title p {
+    letter-spacing: 2.5px;
+    font-family: Figtree-Light;
+    font-size: 17px;
+    /* line-height: 0; */
+}
+
+/* CSS for the clickable header link */
+.header-link {
+    display: block;
+    text-decoration: none;
+    /* Remove underline from link */
+    color: inherit;
+    /* Inherit the current color (black in this case) */
+}
+
+.header-link:hover {
+    opacity: 0.5;
+    /* Optional: Add hover effect */
+}
+
+/* ===================================== */
+/* =           NAVIGATION BAR          = */
+/* ===================================== */
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: var(--text-colour-1);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-colour-1);
+}

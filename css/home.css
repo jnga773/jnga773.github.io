@@ -1,0 +1,346 @@
+/* ===================================== */
+/* =      BACKGROND: COLUMN LAYOUT     = */
+/* ===================================== */
+/* Two Column Background Layout */
+.background-two-colour-layout {
+    display: grid;
+    /* Define Grid */
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "background-coloured background-white";
+    /* Dimension */
+    width: 100%;
+    height: 90vh;
+    /* Position */
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.background-coloured {
+    grid-area: background-coloured;
+    background-color: var(--bg-colour-2);
+    width: 100%;
+    height: 100%;
+}
+
+.background-white {
+    grid-area: background-white;
+    background-color: var(--bg-colour-1);
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================== */
+/* =       PAGE LAYOUT: DEFINING THE GRID       = */
+/* ============================================== */
+.home-page-layout {
+    display: grid;
+    /* Defining Grid */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 200px auto 100px 100px;
+    gap: 0px 0px;
+    grid-template-areas:
+        "home-page-layout-blank-top-1 home-page-layout-blank-top-1"
+        "home-page-layout-profile home-page-layout-blank-top-2"
+        "home-page-layout-profile home-page-layout-greeting"
+        "home-page-layout-profile home-page-layout-info"
+        "home-page-layout-profile home-page-layout-buttons"
+        "home-page-layout-blank-bottom home-page-layout-blank-bottom";
+    /* Aligning */
+    grid-auto-flow: row;
+    justify-content: start;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: center;
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================== */
+/* =          HOME PAGE: BLANK SPACES           = */
+/* ============================================== */
+.home-page-layout-blank-top-1 {
+    grid-area: home-page-layout-blank-top-1;
+    /* Dimension */
+    width: 100%;
+    height: 100%;
+}
+
+.home-page-layout-blank-top-2 {
+    grid-area: home-page-layout-blank-top-2;
+    /* Dimension */
+    width: 100%;
+    height: 100%;
+}
+
+.home-page-layout-blank-bottom {
+    grid-area: home-page-layout-blank-bottom;
+    /* Dimension */
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================== */
+/* =          HOME PAGE: GREETING TEXT          = */
+/* ============================================== */
+.home-page-layout-greeting {
+    grid-area: home-page-layout-greeting;
+    /* Dimension */
+    min-width: 500px;
+    height: auto;
+    /* Alignment */
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-end;
+    /* Padding */
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.home-page-layout-greeting h1 {
+    font-family: Poppins-Semi-Bold;
+    font-size: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+/* ============================================== */
+/* =        HOME PAGE: INFORMATION TEXT         = */
+/* ============================================== */
+.home-page-layout-info {
+    grid-area: home-page-layout-info;
+    /* Alignment */
+    position: relative;
+    text-align: left;
+    /* Dimension */
+    /* width: auto; */
+    max-width: 375px;
+    height: auto;
+    /* Padding */
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.home-page-layout-info p {
+    font-family: Figtree-Light;
+    font-size: 17px;
+    margin: 0;
+    margin-top: 20px;
+    line-height: 1.75;
+    letter-spacing: 0px;
+}
+
+.home-page-layout-info ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.home-page-layout-info li {
+    font-family: Figtree-Light;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+/* ============================================== */
+/* =          HOME PAGE: LINK BUTTONS           = */
+/* ============================================== */
+.home-page-layout-buttons {
+    grid-area: home-page-layout-buttons;
+}
+
+/* ============================================== */
+/* =            PROFILE BOX: LAYOUT             = */
+/* ============================================== */
+.home-page-layout-profile {
+    grid-area: home-page-layout-profile;
+    display: grid;
+    position: static;
+    /* Defining Grid */
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "profile-box-picture"
+        "profile-box-name"
+        "profile-box-line"
+        "profile-box-position"
+        "profile-box-social";
+    /* Alignment */
+    justify-content: start;
+    align-content: start;
+    justify-items: center;
+    align-items: center;
+    /* Self-Alignment */
+    justify-self: end;
+    align-self: start;
+    /* Dimension */
+    max-width: 375px;
+    width: auto;
+    height: auto;
+    /* Position */
+    /* top: 250px; */
+    /* right: 51%; */
+    z-index: 2;
+    /* Padding */
+    /* margin: 0; */
+    margin-right: 30px;
+    /* padding: 0; */
+    /* Colour */
+    background-color: var(--bg-colour-3);
+    box-shadow: -15px 15px 16px 0px rgba(138, 131, 124, 0.23);
+}
+
+/* ============================================== */
+/* =            PROFILE BOX: PICTURE            = */
+/* ============================================== */
+.profile-box-picture {
+    grid-area: profile-box-picture;
+    /* Alignment */
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    /* Dimension */
+    width: 100%;
+    height: auto;
+    max-width: 375px;
+    /* Padding */
+    padding: 30px 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.profile-box-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ============================================== */
+/* =              PROFILE BOX: NAME             = */
+/* ============================================== */
+.profile-box-name {
+    grid-area: profile-box-name;
+    /* Alignment */
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    /* Dimension */
+    width: auto;
+    height: auto;
+    /* Padding */
+    padding: 0px;
+    margin: 0px;
+}
+
+.profile-box-name h3 {
+    font-family: Poppins-Semi-Bold;
+    font-size: 45px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ============================================== */
+/* =              PROFILE BOX: LINE             = */
+/* ============================================== */
+.profile-box-line {
+    grid-area: profile-box-line;
+    /* Alignment */
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    /* Dimension */
+    width: 100%;
+    height: auto;
+    /* Padding */
+    /* padding: 25px; */
+}
+
+hr {
+    border: 1px solid var(--highlight-colour-1);
+    width: 30%;
+    /* margin: 20px auto; */
+}
+
+/* ============================================== */
+/* =            PROFILE BOX: POSITION           = */
+/* ============================================== */
+.profile-box-position {
+    grid-area: profile-box-position;
+    /* Alignment */
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    /* Dimension */
+    width: auto;
+    height: auto;
+    /* Padding */
+    padding: 25px;
+}
+
+.profile-box-position p {
+    font-family: Figtree-Light;
+    font-size: 17px;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ===================================== */
+/* =    PROFILE BOX: SOCIAL MEDIA      = */
+/* ===================================== */
+.profile-box-social {
+    grid-area: profile-box-social;
+    display: flex;
+    /* Alignment */
+    justify-self: center;
+    align-self: center;
+    justify-content: space-between;
+    /* Dimension */
+    width: 100%;
+    height: 100%;
+    /* gap: 15px; */
+    /* Padding */
+    padding: 10px 10px;
+    margin: 0;
+    /* Colour */
+    background-color: var(--bg-colour-1);
+}
+
+.profile-box-social a img {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.2s ease;
+    object-fit: contain;
+}
+
+/* Hover effect to enlarge icons */
+.profile-box-social img:hover {
+    transform: scale(1.2);
+}
+
+/* Box Shadows and Hover Effects */
+.profile-box-social {
+    text-decoration: none;
+}

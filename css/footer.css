@@ -1,0 +1,93 @@
+/* ===================================== */
+/* =               FOOTER              = */
+/* ===================================== */
+/* Footer: Always at the bottom of the page */
+footer {
+    /* Colour */
+    background-color: transparent;
+    color: var(--text-colour-1);
+    /* Display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Padding */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 75px;
+    /* padding: 25px 30px; */
+    margin-top: auto;
+    height: 100px;
+}
+
+/* ===================================== */
+/* =            FOOTER: LEFT           = */
+/* ===================================== */
+/* Footer Left Side: Vertically centered */
+.footer-left {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* ===================================== */
+/* =            FOOTER: RIGHT          = */
+/* ===================================== */
+/* Footer Right Side */
+.footer-right {
+    display: flex;
+    gap: 40px;
+}
+
+/* Email Block */
+.footer-email-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-email-block h,
+.footer-social-block h {
+    font-family: 'Figtree-Bold';
+    font-size: 14px;
+    color: var(--text-colour-1);
+}
+
+.footer-email-block p a {
+    text-decoration: underline;
+    color: var(--text-colour-1);
+    font-size: 0.9rem;
+}
+
+/* Social Block */
+.footer-social-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-social-block p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Bold Follow Text */
+.footer-social-block p:first-child {
+    font-weight: bold;
+}
+
+/* Social Icons */
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-icons a img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect to enlarge icons */
+.footer-social-icons img:hover {
+    transform: scale(1.2);
+}

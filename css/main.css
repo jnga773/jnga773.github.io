@@ -1,0 +1,90 @@
+/* ===================================== */
+/* =               FONTS               = */
+/* ===================================== */
+/* Install extra fonts */
+@font-face {
+    font-family: Figtree-Light;
+    src: url('../fonts/Figtree/static/Figtree-Light.ttf');
+}
+
+@font-face {
+    font-family: Figtree-Bold;
+    src: url('../fonts/Figtree/static/Figtree-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Semi-Bold;
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+/* ===================================== */
+/* =            SET COLOURS            = */
+/* ===================================== */
+:root {
+    /* Background colours */
+    --bg-colour-1: white;
+    --bg-colour-2: #e6dad0;
+    --bg-colour-3: rgba(244, 236, 230);
+    /* Highlight colours */
+    --highlight-colour-1: #0050ff;
+    /* Text colours */
+    --text-colour-1: black;
+    --text-colour-2: white;
+}
+
+/* ===================================== */
+/* =          GENERAL STYLING          = */
+/* ===================================== */
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    zoom: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: black; /* Default text color set to black */
+    font-family: Figtree-Light;
+}
+
+/* Body layout: flex to support footer at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content area to grow and push the footer down */
+main {
+    flex: 1;
+    position: relative;
+    padding-top: 120px; /* Account for header height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================================== */
+/* =          PAGE TRANSITION          = */
+/* ===================================== */
+/* Default state for main and footer - fully visible */
+/* Main and footer start with 0 opacity */
+main {
+    opacity: 0; /* Start with hidden content */
+    transition: opacity 0.5s ease-in-out; /* Apply smooth transition */
+}
+
+/* When fade-in is triggered, opacity becomes 1 */
+.fade-in {
+    opacity: 1; /* Fully visible */
+}
+
+/* When fade-out is triggered, opacity goes back to 0 */
+.fade-out {
+    opacity: 0; /* Fade out effect */
+}
